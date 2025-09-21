@@ -1,0 +1,70 @@
+.page-body {
+    background: var(--primary-white);
+    font-family: var(--primary-font);
+
+    .article-data {
+        position: relative;
+        z-index: 10;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1290px;
+        margin: 122.5px auto 50px;
+        padding: 75px;
+        background: var(--primary-white);
+        border: 3px solid var(--primary-gray);
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--primary-black);
+
+        .title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: var(--dark-gray);
+            text-align: center;
+            margin: 35px auto;
+            width: 60%;
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 1440px;
+        height: 245px;
+        object-fit: cover;
+        background: var(--primary-gray);
+        display: block;
+        z-index: 5;
+    }
+
+    .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 auto 50px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--dark-gray);
+        text-decoration: none;
+        padding-left: 75px;
+
+        &::before {
+            content: "";
+            width: 12px;
+            height: 10px;
+            background-color: var(--primary-black);
+            mask: url('/assets/arrow.png') no-repeat center;
+            mask-size: contain;
+            transform: scaleX(1);
+        }
+    }
+}

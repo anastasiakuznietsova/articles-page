@@ -1,0 +1,26 @@
+<div class="page-body">
+    <div class="search-container">
+        <p>Filter by keywords</p>
+        <div class="input-wrapper">
+            <img src="assets/search.png" class="search-icon"/>
+            <input 
+            type="text"
+            placeholder="The most successful IT companies in 2020"
+            (keyup)="getFilteredCards()"
+            [(ngModel)]="keywords"
+            />
+        </div>
+        <p>Results: {{resNumber()}}</p>
+        <hr/>
+    </div>
+    <div class="articles-block">
+        <div *ngIf="articles(); else elseBlock" class="cards-list">
+            <div *ngFor="let article of articles()">
+                <app-article-card [article]="article" [keywords]="keywords"></app-article-card>
+            </div>
+        </div>
+        <ng-template #elseBlock>
+            <p>No articles were published yet.</p>
+        </ng-template>
+    </div>
+</div>

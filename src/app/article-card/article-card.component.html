@@ -1,0 +1,11 @@
+<div class="card-body">
+    <img [src]="article.image_url" alt="article"/>
+    <div class="article">
+        <p class="article-date">{{article.published_at | date}}</p>
+        <p class="title" [innerHTML]="highlightKeywords(article.title)"></p>
+        <p class="summary" [innerHTML]="getTruncatedSummary()"></p>
+        <button (click)="onArticleClick()" class="details-button">Read more
+            <img src="/assets/arrow.png" alt="arrow"/>
+        </button>
+    </div>
+</div>
